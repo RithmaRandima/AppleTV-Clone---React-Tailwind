@@ -1,16 +1,16 @@
 import { Container } from "./components/Container";
 import Header from "./components/Header";
 import { Hero } from "./components/section/hero";
+import { Usps } from "./components/section/usps";
 
 const App = () => {
   return (
     <>
       <Header />
       <main>
-        <Hero />
-
-        <div>
-          <Container className="">Usps</Container>
+        <div className="bg-background">
+          <Hero />
+          <Usps />
         </div>
 
         <div>
