@@ -1,5 +1,6 @@
 import { Container } from "./components/Container";
 import Header from "./components/Header";
+import { VideoCarousel } from "./components/section/carousel";
 import { Hero } from "./components/section/hero";
 import { Usps } from "./components/section/usps";
 
@@ -8,14 +9,12 @@ const App = () => {
     <>
       <Header />
       <main>
-        <div className="bg-background">
+        <div className="bg-background relative z-10">
           <Hero />
           <Usps />
         </div>
-
-        <div>
-          <Container className="">3 col layout</Container>
-        </div>
+        <VideoCarousel />
+        <div className="h-[300vh]"></div>
 
         <div>
           <Container className="">Hero poster</Container>

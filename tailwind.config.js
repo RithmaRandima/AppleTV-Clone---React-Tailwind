@@ -1,3 +1,5 @@
+import { transform } from "typescript";
+
 /** @type {import('tailwindcss').Config} */
 export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
@@ -29,6 +31,15 @@ export default {
       "3xl": "1.75rem", //28px
       "4xl": ["2.5rem", "1.1"], //40px
       "5xl": ["4.5rem", "1.05"], //72px
+    },
+    keyframes: {
+      "carousel-move": {
+        "0%": { transform: "translateX(0)" },
+        "100%": { transform: "translateX(-100%)" },
+      },
+    },
+    animation: {
+      "carousel-move": "carousel-move var(--duration,80s) infinite",
     },
     extend: {},
   },
